@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocietyQwer — Network & System Engineer</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0a0d14',
+              card: '#121722',
+              border: '#1e293b',
+              accent: '#10b981',
+              cyan: '#06b6d4',
+              purple: '#a855f7'
+            }
+          },
+          fontFamily: {
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="grid-bg min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-black">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-brand-dark/80 border-b border-brand-border">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 font-mono text-emerald-400 font-bold text-lg">
+        <i class="fa-solid fa-terminal"></i>
+        <span>sysadmin@fsociety:~#</span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-6 text-sm font-mono text-slate-300">
+        <a href="#about" class="hover:text-emerald-400 transition-colors">/about</a>
+        <a href="#stack" class="hover:text-emerald-400 transition-colors">/stack</a>
+        <a href="#projects" class="hover:text-emerald-400 transition-colors">/projects</a>
+        <a href="#terminal" class="hover:text-emerald-400 transition-colors">/cli</a>
+        <a href="https://t.me/FsocietyLoveParanoia" target="_blank" class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-3 py-1.5 rounded hover:bg-emerald-500 hover:text-black transition-all">
+          <i class="fa-brands fa-telegram mr-1"></i> Telegram
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+    <!-- HERO SECTION -->
+    <section class="flex flex-col md:flex-row items-center justify-between gap-10">
+      <div class="space-y-6 md:w-2/3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          SysAdmin & Network Engineer
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+          SocietyQwer
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed">
+          Специализируюсь на администрировании сетевой инфраструктуры, настройке L2/L3 коммутаторов, маршрутизации, развертывании доменных служб Windows Server и отказоустойчивых Linux-решений.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2 font-mono text-sm">
+          <a href="https://t.me/FsocietyLoveParanoia" target="_blank" class="px-5 py-2.5 rounded bg-emerald-500 text-black font-semibold hover:bg-emerald-400 transition-all flex items-center gap-2">
+            <i class="fa-brands fa-telegram"></i> Написать в Telegram
+          </a>
+          <a href="https://github.com/societyqwer" target="_blank" class="px-5 py-2.5 rounded bg-brand-card border border-brand-border text-white hover:border-emerald-500/50 transition-all flex items-center gap-2">
+            <i class="fa-brands fa-github"></i> GitHub Профиль
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Status Card -->
+      <div class="w-full md:w-1/3 bg-brand-card border border-brand-border rounded-xl p-5 font-mono text-xs space-y-3 glow-effect">
+        <div class="flex items-center justify-between text-slate-400 border-b border-brand-border pb-2">
+          <span>SYSTEM_STATUS</span>
+          <span class="text-emerald-400">ONLINE</span>
+        </div>
+        <div class="space-y-1.5 text-slate-300">
+          <p><span class="text-emerald-400">OS:</span> Linux / Win Server 2016</p>
+          <p><span class="text-emerald-400">NET:</span> OpenWrt / MikroTik / D-Link</p>
+          <p><span class="text-emerald-400">VLANs:</span> 802.1Q Tagged & Trunking</p>
+          <p><span class="text-emerald-400">SERVICES:</span> AD DC, DNS, GPO, RDS CAL</p>
+          <p><span class="text-emerald-400">SECONDARY:</span> React / Python / Shell</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="space-y-6">
+      <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+        <i class="fa-solid fa-server text-emerald-400"></i> Обо мне
+      </h2>
+      <div class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4 text-slate-300">
+        <p>
+          Работаю ИТ-техником и занимаюсь комплексным обслуживанием сети и серверного оборудования. Имею практический опыт построения защищенных локальных сетей, настройки L3-маршрутизации и работы с доменной инфраструктурой Active Directory.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4">
+          <div class="p-4 bg-brand-dark rounded border border-brand-border">
+            <i class="fa-solid fa-network-wired text-emerald-400 text-xl mb-2"></i>
+            <h3 class="text-white font-semibold mb-1">Сетевая инженерия</h3>
+            <p class="text-xs text-slate-400">MikroTik RouterOS, OpenWrt, D-Link DGS CLI, VLAN, Подкоп, ЕСПД проксирование.</p>
+          </div>
+          <div class="p-4 bg-brand-dark rounded border border-brand-border">
+            <i class="fa-solid fa-shield-halved text-cyan-400 text-xl mb-2"></i>
+            <h3 class="text-white font-semibold mb-1">Системное администрирование</h3>
+            <p class="text-xs text-slate-400">Active Directory DC, DNS Forwarders, GPO Сертификаты, RDS CAL Licensing.</p>
+          </div>
+          <div class="p-4 bg-brand-dark rounded border border-brand-border">
+            <i class="fa-solid fa-code text-purple-400 text-xl mb-2"></i>
+            <h3 class="text-white font-semibold mb-1">Автоматизация & Веб</h3>
+            <p class="text-xs text-slate-400">Python API скрипты, Bash, Alacritty, React + Vite для внутренних дашбордов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section id="stack" class="space-y-6">
+      <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+        <i class="fa-solid fa-layer-group text-cyan-400"></i> Технологический стек
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Network & Infra -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
+          <h3 class="text-lg font-bold text-emerald-400 border-b border-brand-border pb-2">
+            Network & System Administration
+          </h3>
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">MikroTik RouterOS</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">OpenWrt (Cudy TR3000)</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">D-Link DGS CLI</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">VLAN 802.1Q</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">Windows Server AD DC</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">Group Policy (GPO)</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">PKI Autoenrollment</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">RDS CAL Licensing</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">DNS & DHCP Forwarding</span>
+          </div>
+        </div>
+
+        <!-- Dev & Tools -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 space-y-4">
+          <h3 class="text-lg font-bold text-cyan-400 border-b border-brand-border pb-2">
+            Development, Shell & Scripting
+          </h3>
+          <div class="flex flex-wrap gap-2 font-mono text-xs">
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">Python 3</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">Bash / Shell</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">Git & GitLab</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">Alacritty Terminal</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">React.js</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">Vite</span>
+            <span class="px-3 py-1.5 bg-brand-dark rounded border border-brand-border text-slate-200">HTML5 / CSS3 / JS</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="space-y-6">
+      <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+        <i class="fa-solid fa-folder-open text-purple-400"></i> Проекты и практики
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Project 1: DiyOrCry -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition-all space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">DIY OR CRY E-Commerce Platform</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Live Web App</span>
+            </div>
+            <p class="text-sm text-slate-400">
+              Полнофункциональное веб-приложение интернет-магазина, разработанное на React + Vite с кастомной стилизацией и маршрутизацией.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">React</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">Vite</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">JavaScript</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-brand-border flex items-center justify-between font-mono text-xs">
+            <a href="https://societyqwer.github.io/DiyOrCry/" target="_blank" class="text-emerald-400 hover:underline flex items-center gap-1 font-semibold">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Открыть DiyOrCry
+            </a>
+            <a href="https://github.com/societyqwer" target="_blank" class="text-slate-400 hover:text-white">
+              <i class="fa-brands fa-github"></i> Исходники
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Network Infrastructure & Active Directory -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col justify-between hover:border-cyan-500/50 transition-all space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">Инфраструктура AD DC & VLAN</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">SysAdmin Project</span>
+            </div>
+            <p class="text-sm text-slate-400">
+              Проектирование и развертывание отказоустойчивой сети: изолированные VLAN 802.1Q на D-Link DGS, Windows Server Active Directory DC, централизованная выдача сертификатов через GPO и лицензирование RDS.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">Active Directory</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">D-Link CLI</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">GPO</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">MikroTik</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-brand-border flex items-center justify-between font-mono text-xs text-slate-400">
+            <span>Сетевой профиль</span>
+            <a href="https://t.me/FsocietyLoveParanoia" target="_blank" class="hover:text-emerald-400 flex items-center gap-1">
+              <i class="fa-brands fa-telegram"></i> Запросить детали
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: OpenWrt Routing & Podkop -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col justify-between hover:border-emerald-500/50 transition-all space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">OpenWrt Multi-Router Routing</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Network Routing</span>
+            </div>
+            <p class="text-sm text-slate-400">
+              Настройка маршрутизации и проброса сетевых сервисов (включая сетевую печать) между несколькими роутерами Cudy TR3000 под управлением OpenWrt с интеграцией Podkop.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">OpenWrt</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">Linux Networking</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">Podkop</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-brand-border flex items-center justify-between font-mono text-xs text-slate-400">
+            <span>Cudy TR3000 Cluster</span>
+            <a href="https://github.com/societyqwer" target="_blank" class="hover:text-white">
+              <i class="fa-brands fa-github"></i> Configs
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Банкетам.Нет -->
+        <div class="bg-brand-card border border-brand-border rounded-xl p-6 flex flex-col justify-between hover:border-purple-500/50 transition-all space-y-4">
+          <div class="space-y-3">
+            <div class="flex justify-between items-start">
+              <h3 class="text-xl font-bold text-white">Банкетам.Нет Portal</h3>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-500/10 text-purple-400 border border-purple-500/30">Web Project</span>
+            </div>
+            <p class="text-sm text-slate-400">
+              Веб-портал для бронирования мероприятий, созданный с использованием React компонентации, клиентского роутинга и современным пользовательским интерфейсом.
+            </p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">React</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">JavaScript</span>
+              <span class="px-2 py-0.5 bg-brand-dark text-slate-300 rounded border border-brand-border">CSS3</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-brand-border flex items-center justify-between font-mono text-xs">
+            <a href="https://github.com/societyqwer" target="_blank" class="text-slate-400 hover:text-white flex items-center gap-1">
+              <i class="fa-brands fa-github"></i> Репозитории на GitHub
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TERMINAL CLI SECTION -->
+    <section id="terminal" class="space-y-4">
+      <h2 class="text-2xl font-bold text-white flex items-center gap-3">
+        <i class="fa-solid fa-square-poll-horizontal text-emerald-400"></i> Interactive CLI
+      </h2>
+      <div class="bg-brand-card border border-brand-border rounded-xl overflow-hidden font-mono text-sm glow-effect">
+        <div class="bg-brand-dark px-4 py-2 border-b border-brand-border flex items-center justify-between text-xs text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+            <span class="ml-2 text-slate-300">alacritty - sysadmin@fsociety:~</span>
+          </div>
+          <span>v1.0.4</span>
+        </div>
+        <div class="p-4 space-y-3 min-h-[180px]" id="terminal-body">
+          <p class="text-slate-400">Добро пожаловать в CLI консоль. Введите <span class="text-emerald-400">help</span> для списка доступных команд.</p>
+          <div id="terminal-output"></div>
+          <div class="flex items-center gap-2">
+            <span class="text-emerald-400 font-bold">sysadmin@fsociety:~$</span>
+            <input type="text" id="terminal-input" class="bg-transparent text-white focus:outline-none flex-grow" placeholder="Введите команду...">
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-brand-border py-8 bg-brand-dark/50 text-center font-mono text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>© SocietyQwer  — Network & System Engineer</p>
+      <div class="flex gap-4">
+        <a href="https://t.me/FsocietyLoveParanoia" target="_blank" class="hover:text-emerald-400">Telegram</a>
+        <a href="https://github.com/societyqwer" target="_blank" class="hover:text-emerald-400">GitHub</a>
+        <a href="https://societyqwer.github.io/DiyOrCry/" target="_blank" class="hover:text-emerald-400">DiyOrCry</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
